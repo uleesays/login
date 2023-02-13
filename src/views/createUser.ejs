@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body id="createBody">
+        <%- include('partials/header.ejs') %>
+            <div class="mainTitles">
+
+                <h1>Crea tu usuario</h1>
+
+            </div>
+
+            <div class="formContainer formContainerCreate">
+                <form class="welcomeForm" method="POST" action="/users/create" enctype="multipart/form-data">
+                    <label class="welcomeLabel" for="">Nombre</label>
+                    <br>
+                    <br>
+                    <input 
+                    class="welcomeInput <%= locals.errors && errors.firstName ? 'is-invalid' : null %>" 
+                    type="text" 
+                    name="firstName"
+                    value="<%= locals.oldData ? oldData.firstName : null %>">
+                    <br>
+                    <br>
+                    <label class="welcomeLabel" for="">Apellido</label>
+                    <br>
+                    <br>
+                    <input
+                    class="welcomeInput <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
+                    type="text" 
+                    name="lastName"
+                    value="<%= locals.oldData ? oldData.lastName : null %>">
+                    <br>
+                    <% if (locals.errors && errors.lastName) { %> 
+                        <p class="textDanger"><%= errors.lastName.msg %></p>
+                    <% } %>
+                    <br>
+                    <label class="welcomeLabel" for="">e-mail</label>
+                    <br>
+                    <br>
+                    <input 
+                    class="welcomeInput <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                    type="email" 
+                    name="email"
+                    value="<%= locals.oldData ? oldData.email : null %>">
+                    <br>
+                    <% if (locals.errors && errors.email) { %> 
+                        <p class="textDanger"><%= errors.email.msg %></p>
+                    <% } %>
+                    <br>
+                    <label class="welcomeLabel" for="">Contraseña</label>
+                    <br>
+                    <br>
+                    <input 
+                    class="welcomeInput <%= locals.errors && errors.password ? 'is-invalid' : null %>" 
+                    type="password" 
+                    name="password">
+                    <br>
+                    <% if (locals.errors && errors.password) { %> 
+                        <p class="textDanger"><%= errors.password.msg %></p>
+                    <% } %>
+                    <br>
+                    <label class="welcomeLabel" for="">Avatar</label>
+                    <br>
+                    <br>
+                    <input class="welcomeInput createInput" type="file" name="img">
+                    <br>
+                    <% if (locals.errors && errors.img) { %> 
+                        <p class="textDanger"><%= errors.img.msg %></p>
+                    <% } %>
+                    <br>
+
+                    <div class="welcomeButtonContainer">
+                        <button class="welcomeButton" type="submit">Crear</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+    </body>
+
+</html>

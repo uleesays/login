@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('partials/head.ejs') %>
+
+
+
+    <body id="dataBody">
+
+        <%- include('partials/header.ejs') %>
+
+            <div class="mainTitles">
+
+                <h1>Usuarios</h1>
+
+            </div>
+
+            <main>
+                <div class="dataCardContainer">
+
+                    
+
+                    <% for (let i=0; i < users.length; i++) {%>
+                       
+
+                        <div class="dataCard">
+
+                            
+                            <div class="dataTextContainer">
+                                <div class="dataButtonContainer">
+                                    <a href="/users/edit/<%=users[i].id %>"><button class="dataButton">Editar</button></a>
+                                </div>
+
+                                <br>
+                                <br>
+
+                                <label class="dataLabel" for="">ID</label>
+                                <br>
+                                <br>
+
+                                <p class="dataPara">
+                                    <%= users[i].id %>
+                                </p>
+                                <br>
+                                <label class="dataLabel" for="">Nombre</label>
+                                <br>
+                                <br>
+
+                                <p class="dataPara">
+                                    <%= users[i].firstName %>
+                                </p>
+                                <br>
+
+                                <label class="dataLabel" for="">Apellido</label>
+                                <br>
+                                <br>
+                                <p class="dataPara">
+                                    <%= users[i].lastName %>
+                                </p>
+                                <br>
+                                <label class="dataLabel" for="">email</label>
+                                <br>
+                                <br>
+                                <p class="dataPara">
+                                    <%= users[i].email %>
+                                </p>
+                            </div>
+                            <div class="dataImgContainer">
+                                <img class="dataImg" src="<%= users[i].img %>" alt="">
+                            </div>
+
+                        </div>
+                        
+                        <% } %>
+
+                </div>
+            </main>
+
+    </body>
+
+</html>

@@ -1,0 +1,251 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navBar {
+    border: 2px solid #cad2c5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 150px;
+    background-color: #2f3e46;
+    margin-bottom: 50px;  
+}
+h1 {
+    font-size: 30px !important;
+}
+.mainTitles {
+    background-color: #cad2c5;
+    padding: 20px;
+    border-radius: 7px;
+    border-color: #2f3e46;
+}
+
+.navBarItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+.material-icons {
+   font-size: 200px !important;
+   color: #cad2c5;
+}
+
+.material-icons:hover {
+    color: #84a98c;
+ }
+
+#mainBody {
+    background-image: url('/images/backgrounds/pexels-photo-220118.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+#createBody {
+    background-image: url('/images/backgrounds/pexels-photo-347139.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+.welcomeLabel {
+    font-size: 20px;
+}
+
+.welcomeInput {
+    width: 350px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(217, 217, 217);
+    padding: 10px;
+    font-size: 17px;
+}
+
+.welcomeCheckbox {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border-color: aliceblue;
+}
+
+.welcomeLabelCheckbox {
+   padding: 10px;
+}
+
+.formContainer {
+    margin-top: 50px;
+    border-radius: 7px;
+    padding: 30px;
+    background-color: rgb(153, 159, 237);
+    border: 1px solid rgb(236, 236, 236);
+    display: flex;
+    flex-wrap: nowrap; 
+    flex-direction: column;
+}
+
+.formContainerCreate {
+ background-color: #ffd6a7;
+}
+
+.createInput {
+    height: 50px;
+    border: 1px solid black;
+}
+
+.welcomeButton {
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    border-color: azure;
+}
+
+.welcomeButton:hover {
+    border-color: rgb(162, 162, 245);
+}
+
+.welcomeButtonContainer {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+}
+
+.dataCard {
+    background-color: #cad2c5;
+    border: 2px solid black;
+    margin: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    align-content:flex-start;
+    justify-content: space-between;
+}
+#dataBody{
+    background-color: #4b555a;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.dataTextContainer {
+    padding: 5px;
+}
+
+.dataImg {
+    border-radius: 25px;
+   max-height: 50%;
+   
+}
+
+.dataImgContainer {
+    display: flex;
+    justify-content:flex-end;
+    margin-bottom: -150px;
+}
+
+.editImgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dataPara {
+    font-size: 20px;
+}
+
+.dataLabel {
+    background-color: #2f3e46;
+    color:rgb(217, 217, 217);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.dataButtonContainer {
+    position: absolute;
+    left: 400px;
+}
+
+.dataButton {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+.dataButton:hover {
+    border-color: grey;
+}
+
+#editBody{
+    background-color: #789193;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.noWriteHere {
+    color: rgb(97, 97, 97);
+    background-color: #9f9e9e;
+}
+
+.editInput {
+    width: 350px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid rgb(178, 187, 187);
+}
+
+.editBottomButtons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.editImg {
+    border-radius: 25px;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.editAvatar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.danger {
+    color:rgb(255, 255, 255);
+    background-color: #ec7b7b;
+    margin-top: 15px;
+}
+
+.textDanger {
+    color: rgb(221, 44, 44);
+
+}
+
+.is-invalid {
+    border: 1px solid red;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body id="editBody">
+        <%- include('partials/header.ejs') %>
+
+            <div class="mainTitles">
+
+                <h1>Editar Usuario</h1>
+            </div>
+                <form action="/users/edit/delete/<%= user.id %>?_method=DELETE"  method="POST">
+                    <button class="dataButton danger">Borrar Usuario</button>
+                </form>
+
+            
+            <% if (user) { %>
+                <form method="POST" action="/users/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
+                    <div class="dataCard">
+
+
+                        <div class="dataTextContainer">
+
+
+                            <label class="dataLabel" for="">ID</label>
+                            <br>
+                            <br>
+                            <input class="editInput noWriteHere" type="text" name="id" value="<%= user.id %>"
+                                readonly="true">
+                            <br>
+                            <% if (locals.errors && errors.firstName) { %> 
+                                <p class="textDanger"><%= errors.firstName.msg %></p>
+                            <% } %>
+                            <br>
+                            <label class="dataLabel" for="">Imagen</label>
+                            <br>
+                            <br>
+                            <input class="editInput" type="file" name="img" value="<%= user.img %>">
+                            <br>
+                            <br>
+                            <label class="dataLabel" for="">Nombre</label>
+                            <br>
+                            <br>
+                            <input class="editInput" type="text" name="firstName" value="<%= user.firstName %>">
+                            <br>
+                            <br>
+                            <label class="dataLabel" for="">Apellido</label>
+                            <br>
+                            <br>
+                            <input class="editInput" type="text" name="lastName" value="<%= user.lastName %>">
+                            <br>
+                            <br>
+                            <label class="dataLabel" for="">email</label>
+                            <br>
+                            <br>
+                            <input class="editInput" type="text" name="email" value="<%= user.email %>">
+                            <br>
+                            <br>
+                            <label class="dataLabel" for="">Contraseña</label>
+                            <br>
+                            <br>
+                            <input class="editInput" type="password" name="password" value="<%= user.password %>">
+                        </div>
+                        <div class="editImgContainer">
+                            <div class="editAvatar">
+                                <img class="editImg" src="<%= user.img %>" alt="">
+                            </div>
+                            <div class="editBottomButtons">
+                               
+                                <br>
+                                <button class="dataButton">Aceptar</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </form>
+
+                
+                <% } else { %>
+                    <h1>Usuario Inexistente</h1>
+                    <% } %>
+    </body>
+
+</html>
