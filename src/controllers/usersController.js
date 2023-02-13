@@ -29,7 +29,10 @@ const process = (req, res) => {
             });
     }
 
-    let usersJSON = fs.readFileSync(path.join(__dirname, '../data/users.json'));
+   
+        
+       
+   let usersJSON = fs.readFileSync(path.join(__dirname, '../data/users.json'));
     let users = JSON.parse(usersJSON);
 
     const {
@@ -62,9 +65,9 @@ const process = (req, res) => {
 
     usersJSON = JSON.stringify(users);
 
-    fs.writeFileSync(path.join(__dirname, '../data/users.json'), usersJSON)
+    fs.writeFileSync(path.join(__dirname, '../data/users.json'), usersJSON) 
 
-    res.redirect('/users/database')
+    res.redirect('/users/database') 
 }
 
 const database = (req, res) => {

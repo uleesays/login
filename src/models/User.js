@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+
 const User = {
 
     fileName: '../data/users.json',
@@ -39,7 +40,7 @@ const User = {
 
     create: function (userData) {
 
-        let allUsers = this.findAll();
+         let allUsers = this.findAll();
         let newUser = {
             id: this.generateId(),
             ...userData
@@ -47,7 +48,7 @@ const User = {
         allUsers.push(newUser);
 
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-        return newUser;
+        return newUser; 
 
     },
 

@@ -21,6 +21,9 @@
                     name="firstName"
                     value="<%= locals.oldData ? oldData.firstName : null %>">
                     <br>
+                    <% if (locals.errors && errors.firstName) { %> 
+                        <p class="textDanger"><%= errors.firstName.msg %></p>
+                    <% } %>
                     <br>
                     <label class="welcomeLabel" for="">Apellido</label>
                     <br>
