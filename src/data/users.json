@@ -1,1 +1,18 @@
-[{"id":1,"firstName":"Ulises","lastName":"Hernandez","email":"uleesays@gmail.com","password":"ulisesalberto","img":"/images/avatars/screenshot.png"},{"id":3,"firstName":"Sean","lastName":"Punk","email":"jack@daniels.com","password":"2jfi43ij","img":"/images/avatars/avatar-1676222810355_img.jpg"},{"id":5,"firstName":"Black Hole","lastName":"Sun","email":"blackholesun@wontyou.com","password":"4fwjimdklwe","img":"/images/avatars/avatar-1676234360878_img.jpg"},{"id":7,"firstName":"90","lastName":"09","email":"2@23.com","password":"dkdkdkvsojkvsodkvosk","img":"/images/avatars/avatar-1676309844715_img.webp"}]
+[
+ {
+  "id": 2,
+  "firstName": "Placeholder",
+  "lastName": "Placeholder",
+  "email": "place@holder.com",
+  "password": "$2a$10$7PrATGKBVTEGWEINSXi7We71qMsh3r49z/3k/xLMze95WB.GAyhFC",
+  "img": "/images/avatars/avatar-1676467115077_img.jpeg"
+ },
+ {
+  "id": 3,
+  "firstName": "Ulises",
+  "lastName": "Hernandez",
+  "email": "uleesays@gmail.com",
+  "password": "$2a$10$sLN3SpEyqm8CNCP2vk2gEuTeDLiHdijws57V35MeDh7HRYvVguvTS",
+  "img": "/images/avatars/avatar-1676483037054_img.jpg"
+ }
+]

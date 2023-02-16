@@ -5,44 +5,59 @@
 
     <body id="mainBody">
         <%- include('partials/header.ejs') %>
-        <div class="mainTitles">
-        <h1>Ingresa</h1>
-        </div>
-
-        <main>
-            <div class="formContainer">
-                <form class="welcomeForm" action="">
-                    <label class="welcomeLabel" for="">e-mail</label>
-                    <br>
-                    <br>
-                    <input class="welcomeInput" type="email" name="email">
-                    <br>
-                    <br>
-                    <label class="welcomeLabel" for="">contraseña</label>
-                    <br>
-                    <br>
-                    <input class="welcomeInput" type="password" name="password">
-                    <br>
-                    <br>
-                    <input class="welcomeCheckbox" type="checkbox">
-                    <label class="welcomeLabelCheckbox" for="">no me olvides</label>
-                    <br>
-                    <br>
-                    <div class="welcomeButtonContainer">
-                        <button class="welcomeButton" type="submit">Ingresar</button>
-
-                    </div>
-
-                </form>
-                <div class="welcomeCreateButton">
-                    <a href="/users/create"><button class="welcomeButton" type="submit">Crear Usuario</button></a>
-                </div>
+            <div class="mainTitles">
+                <h1>Ingresa</h1>
             </div>
-        </main>
 
-        <footer>
+            <main>
+                <div class="formContainer">
+                    <form class="welcomeForm" method="POST" action="/users/login">
+                        <label class="welcomeLabel" for="">e-mail</label>
+                        <br>
+                        <br>
+                        <input class="welcomeInput <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                            type="email" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+                        <br>
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="textDanger">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
+                                <br>
+                                <label class="welcomeLabel" for="">Contraseña</label>
+                                <br>
+                                <br>
+                                <input
+                                    class="welcomeInput <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                                    type="password" name="password">
+                                <br>
+                                <% if (locals.errors && errors.password) { %>
+                                    <p class="textDanger">
+                                        <%= errors.password.msg %>
+                                    </p>
+                                    <% } %>
+                                        <br>
 
-        </footer>
+                                        <label class="welcomeLabelCheckbox" for="">
+                                            <input class="welcomeCheckbox"
+                                                type="checkbox" name="remember_user"> Recordarme</label>
+                                        <br>
+                                        <br>
+                                        <div class="welcomeButtonContainer">
+                                            <button class="welcomeButton" type="submit">Ingresar</button>
+
+                                        </div>
+
+                    </form>
+                    <div class="welcomeCreateButton">
+                        <a href="/users/create"><button class="welcomeButton" type="submit">Crear Usuario</button></a>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+
+            </footer>
 
     </body>
 

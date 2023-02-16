@@ -1,26 +1,61 @@
 <header>
     <nav class="navBar">
-        <div class="navBarItem">
-            <a href="/"><span class="material-icons">
-                home
-            </span></a>
-        </div>
+
+        <% if (locals.isLogged) { %>
+
+            <div class="navBarItem">
+                <a href="/"><span class="material-icons">
+                    home
+                </span></a>
+            </div>
+
+            <div class="navBarItem">
+                <a href="/users/database"> <span class="material-icons">
+                    people
+                    </span></a>
+             </div>
+
+             <div class="navBarItem">
+                <a href="/users/logout"><span class="material-icons">
+                    logout
+                    </span></a>
+             </div>
+
+             <div class="navBarItem">
+                <a href="/users/profile"> <img class="navBarUserImage" src="<%= locals.userLogged.img %>" alt="">
+                     <!--   <span class="material-icons">
+                    account_circle
+                    </span> -->
+                </a>
+                    <p class="userIsLogged">hey <%= locals.userLogged.firstName %></p>
+             </div>
+         
+        <% } else { %>
+
+       
         <div class="navBarItem">
             <a href="/users/login"><span class="material-icons">
-                person
-            </span></a>
+                login
+                </span></a>
         </div>
+
         <div class="navBarItem">
            <a href="/users/create"> <span class="material-icons">
                 person_add
             </span></a>
         </div>
 
-        <div class="navBarItem">
-            <a href="/users/database"> <span class="material-icons">
-                people
-                </span></a>
-         </div>
+        <% } %>
+
+       
+
+         
+
+        
+
+         
+
+      
 
        
     </nav>

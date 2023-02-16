@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body id="profileBody">
+
+        <%- include('partials/header.ejs') %>
+            <div class="welcomeUser">
+                <h2>Hi <%= user.firstName %>
+                </h2>
+                <img class="userAvatar" src="<%= user.img %>" alt="avatar">
+                <div class="userEmail">
+                    
+                        <%= user.email %>
+                    
+                </div>
+            </div>
+
+
+
+    </body>
+
+</html>

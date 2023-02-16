@@ -13,7 +13,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 150px;
+    gap: 30px;
     background-color: #2f3e46;
     margin-bottom: 50px;  
 }
@@ -31,9 +31,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-  
     flex-grow: 1;
-    flex-basis: 200px;
+    flex-basis: 100px;
 }
 
 .material-icons {
@@ -45,10 +44,13 @@ h1 {
     color: #84a98c;
  }
 
+#rootBody {
+    background-color: #ec7b7b;
+}
+
 #mainBody {
-    background-image: url('/images/backgrounds/pexels-photo-220118.jpeg');
-    background-size:cover;
-    background-repeat: no-repeat;
+    
+    background-color: rgb(103, 41, 185);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -57,9 +59,8 @@ h1 {
 }
 
 #createBody {
-    background-image: url('/images/backgrounds/pexels-photo-347139.jpeg');
-    background-size:cover;
-    background-repeat: no-repeat;
+   
+    background-color: rgb(151, 122, 85);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -248,4 +249,34 @@ h1 {
 
 .is-invalid {
     border: 1px solid red;
+}
+
+#profileBody {
+    background-color: #68afd2;
+}
+
+.welcomeUser {
+    margin: 50px;
+}
+
+.userAvatar {
+    border-radius: 30%;
+    width: 100px;
+}
+
+.userEmail {
+    padding: 20px;
+    background-color: #789193;
+    
+    
+}
+
+.userIsLogged {
+    color: white;
+} 
+
+.navBarUserImage {
+    border-radius: 100%;
+    max-width: 70%;
+    border: 1px solid #cad2c5;
 }
